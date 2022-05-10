@@ -14,7 +14,7 @@ async fn main() -> Result<()> {
         client
             .set(
                 format!("{}{}", "hello", i).as_str(),
-                format!("{}{}", "world", i).into(),
+                format!("{}{}", "world", i * 2).into(),
             )
             .await?;
         println!("set value into the server; index: {:?}", i);
