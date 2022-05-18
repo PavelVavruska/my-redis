@@ -10,6 +10,7 @@ fn new_sharded_db(num_shards: usize) -> ShardedDb {
     Arc::new(Mutex::new(DashMap::with_capacity(num_shards)))
 }
 
+/// To run this server: cargo run --bin server
 #[tokio::main]
 async fn main() {
     // Bind the listener to the address
